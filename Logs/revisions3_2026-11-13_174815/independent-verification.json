@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-11-13T20:58:10-08:00",
+  "result": "passed",
+  "checksums": {
+    "source-checksums.json": {
+      "files_checked": 7,
+      "mismatches": []
+    },
+    "output-checksums.json": {
+      "files_checked": 41,
+      "mismatches": []
+    }
+  },
+  "output_inventory_matches": true,
+  "continuous_homophily": {
+    "settings": 24,
+    "epsilon": 4,
+    "epsilon_label": 2,
+    "epsilon_edge": 2,
+    "repetitions_per_setting": 2500
+  },
+  "twitch_language_summary_present": true,
+  "additional_simulation_run_performed": false
+}

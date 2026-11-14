@@ -1,0 +1,166 @@
+{
+  "DerivedData/MSE_vs_CellComposition.csv": {
+    "sha256": "24db79f1452c3e5807b015863229e23acac2576aeef28a01f52ca5f7ad2a6dc9",
+    "bytes": 3024
+  },
+  "DerivedData/MSE_vs_Homophily.csv": {
+    "sha256": "33c192e5d9c47d455d05cf8d98a5d21437c5f4f33a3524443b7e85f5edc1c516",
+    "bytes": 3079
+  },
+  "DerivedData/accuracy_results_Amin_VarianceReduced.csv": {
+    "sha256": "378c3a8bf89201278de04012f77bea6e12cdf38433ff6786ad78069ea39a9c98",
+    "bytes": 2946
+  },
+  "DerivedData/dp_simulation_amazon_multi_eps.csv": {
+    "sha256": "953fe7941d8a0da3fc564beaf5da77bcd845858f5a53421ba7dcfc498e408571",
+    "bytes": 271772
+  },
+  "DerivedData/graphon_regression_mse_results.csv": {
+    "sha256": "ccfebd494d6d21a12aad82b8794d3b3ddbe23416edeef861065a2de5831f69ff",
+    "bytes": 4216
+  },
+  "DerivedData/mse_simulation_results_ec.csv": {
+    "sha256": "f9a1a5dbc96d7b3c19be75b260e031e7b41404854f33129fa4cdd4df02b152ad",
+    "bytes": 16845172
+  },
+  "DerivedData/sbm_dp_mse_results_combined.csv": {
+    "sha256": "e2103bee7b53a70e00d7778afd16e7c598f30a19b15958813dbbbff272334aba",
+    "bytes": 4241
+  },
+  "DerivedData/twitch_dp_results.csv": {
+    "sha256": "02f7984698f7f528d4587013d5e8ff700d2ef89b5ca25d1ddb19653b6de47223",
+    "bytes": 125765
+  },
+  "DerivedData/twitch_language_summary.csv": {
+    "sha256": "fb73978ff7bff132696507ebb33525f1ccded48a29f92d4eb1322908096a9d75",
+    "bytes": 7102
+  },
+  "DerivedData/village_caste_dp_results.csv": {
+    "sha256": "d636fa3bfc724ac27bc3b22e9ec5e796b98beef075be78756c4b8b07c2ce07be",
+    "bytes": 4159
+  },
+  "Figures/Correlation_Histogram_Overlaid_Eps4_6_8.pdf": {
+    "sha256": "976bf12e15b8f2872170dd97ae0a82a8b265c35b29826f085bee490417206600",
+    "bytes": 5457
+  },
+  "Figures/Correlation_Histogram_Overlaid_Eps4_6_8.png": {
+    "sha256": "df39a0c36d52d15f26c03d7530c1a15411026f9cfab9b9c8cf271ed3c04a11b9",
+    "bytes": 90303
+  },
+  "Figures/Largest_Village_Connectivity_Boxplot.pdf": {
+    "sha256": "26799ece8a3b9eb665ceab0f7e21080b3549b2d7b78dfe87a3e962624fdff6f5",
+    "bytes": 24992
+  },
+  "Figures/Largest_Village_Connectivity_Boxplot.png": {
+    "sha256": "0bf207aae4120b3ecfd34e35265e951e94ff01c40d8abb9092d00d14f57d1103",
+    "bytes": 204670
+  },
+  "Figures/MSE_vs_CellComposition.pdf": {
+    "sha256": "fee7f8e071d63ce259a369ac99b1bc10586dffea48481d02d9e58ab04fe487e4",
+    "bytes": 6570
+  },
+  "Figures/MSE_vs_Homophily.pdf": {
+    "sha256": "38134cd1341820e6f5556719f723f893b154b65ada709b59f0b011b0adca649d",
+    "bytes": 6525
+  },
+  "Figures/True_vs_Noisy_EC_Village_No_56.pdf": {
+    "sha256": "207a0512ad3a5dcab33e45f15ceceb749b6ad7881b849bd03a20caf3f2ab1e63",
+    "bytes": 8333
+  },
+  "Figures/True_vs_Noisy_EC_Village_No_56.png": {
+    "sha256": "6f83846cd0c05b1ede0cab600aaac631d975cf7ca5c03d190c3f4d6ebd16992a",
+    "bytes": 186344
+  },
+  "Figures/Twitch_Correlation_Histogram_Overlaid_Eps4_6_8.pdf": {
+    "sha256": "597d6c1072cf877e017fabd350c346dfd3b516209fe961aea59a4e40b028201c",
+    "bytes": 5551
+  },
+  "Figures/Twitch_Correlation_Histogram_Overlaid_Eps4_6_8.png": {
+    "sha256": "0d2a2bdb8256bcd24996adf4aca7fb9b73d9400160520196a1e3566d78453f6b",
+    "bytes": 41727
+  },
+  "Figures/Twitch_EN_Binscatter.pdf": {
+    "sha256": "77e7f9f4bb4db4d539b2db13bf23c38361b5fc095c18ef806e2a9ec83b32703e",
+    "bytes": 5871
+  },
+  "Figures/Twitch_EN_Binscatter.png": {
+    "sha256": "d952d67d65b49954eeb3e726ae73e2b94d3fc0cbbb194f669ad76dd0da7ab3d4",
+    "bytes": 61485
+  },
+  "Figures/Twitch_Scatter_Eps8_Run1.pdf": {
+    "sha256": "9b0e96ec084c80af504223b729d0214d65900b181eead898f676fe7833b3df33",
+    "bytes": 7042
+  },
+  "Figures/Twitch_Scatter_Eps8_Run1.png": {
+    "sha256": "34280e7d1036f57b69ed72ed043b01e1932ccec00028e0acb8bd882492357c23",
+    "bytes": 87362
+  },
+  "Figures/accuracyVsEpsilon_Amin_VarianceReduced.pdf": {
+    "sha256": "65dd529e75657442579408301e6fa3055957043925afc8b9d9275a9eb9d602e1",
+    "bytes": 5346
+  },
+  "Figures/amazon_salesrank_regression.pdf": {
+    "sha256": "10e68d78de84ad4f86c5391424d05e3ebd217b17bb349cac254460dcf0ab2855",
+    "bytes": 7649
+  },
+  "Figures/amazon_salesrank_regression.png": {
+    "sha256": "b3b196fd4616b8a2044e4b432960be3bec2abade944ae0afb37a09582975a593",
+    "bytes": 63996
+  },
+  "Figures/dp_coefficient_histogram_overlaid.pdf": {
+    "sha256": "7a4cabacf93ae023d888568a564c72987209bbc711cab099b7078b1d5910192a",
+    "bytes": 5675
+  },
+  "Figures/dp_coefficient_histogram_overlaid.png": {
+    "sha256": "9030be2b1930d10429048d2d6c57d5a4787372181ca4fc2dcd759b5226b49490",
+    "bytes": 53074
+  },
+  "Figures/graphon_allocation_mse_plot.pdf": {
+    "sha256": "4aed9365196d1a964afb5930450970e12f62d16521e79c0cb227cf7736845249",
+    "bytes": 7188
+  },
+  "Figures/graphon_allocation_mse_plot.png": {
+    "sha256": "c98c199eb32d4add7f1cd79b8546fe2111ebe93baa79c266aaeb7281d7a7f152",
+    "bytes": 86248
+  },
+  "Figures/graphon_homophily_rsquared_plot.pdf": {
+    "sha256": "b20a29c83de2dfeb0b53b1b8a4a1709c8d7ac270510208e4490fb93f6d6f0f58",
+    "bytes": 4898
+  },
+  "Figures/graphon_homophily_rsquared_plot.png": {
+    "sha256": "9acdfcdaeb5cc3a876cd0906762a3078d436bdd0b793db2e69279a6a23a946a4",
+    "bytes": 46850
+  },
+  "Figures/graphon_integral_mse_plot.pdf": {
+    "sha256": "7c3101af5ef1f15afbdabbd637c0b6614ec9d37a0eff0b188bc81856e521bbbe",
+    "bytes": 6423
+  },
+  "Figures/graphon_integral_mse_plot.png": {
+    "sha256": "abc4f90b9a385287588dad3cebac4595d3a423bf484b447822046d5d53d6e49e",
+    "bytes": 59560
+  },
+  "Figures/graphon_regression_mse_plot.pdf": {
+    "sha256": "f58d23f54a7318660daed031f7b93e1d05fcff47b1c506067fc2732ef7428e6d",
+    "bytes": 6422
+  },
+  "Figures/graphon_regression_mse_plot.png": {
+    "sha256": "7b9449715b06a895f43b33dc5fd5767a5d9672005ff026a17d4152c15d48d241",
+    "bytes": 58238
+  },
+  "Figures/mse_vs_size_constant_degree_ec.pdf": {
+    "sha256": "e215f2ac70920fc98dd1517ef3a94476bb96e88788ecb383ddd265ad8cd57b52",
+    "bytes": 6214
+  },
+  "Figures/sbm_dp_mse_plot_2000.pdf": {
+    "sha256": "0a7b78df6c3aae133ca6b9fd2728b65e7e9a79f2679e0872fd93b011d9659ec1",
+    "bytes": 7342
+  },
+  "Figures/sbm_dp_mse_plot_20000.pdf": {
+    "sha256": "dd4a537e9d53d4f8d75aa711299d4383ef61e42f0def60867fd44f50cb9c527a",
+    "bytes": 7311
+  },
+  "Tables/village_summary.tex": {
+    "sha256": "58d46bf328e605fdec6556c4415278cc10701393f957ff916e6aaa967b97926d",
+    "bytes": 2162
+  }
+}

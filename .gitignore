@@ -47,3 +47,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Local replication inputs
+.data/
+
+# Local archives excluded from the public replication kit
+/.local-archive/
