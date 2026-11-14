@@ -1,0 +1,622 @@
+{
+  "amazon-meta.txt": {
+    "sha256": "600135116a05b7ce2dcb7e842e892d663c6190a0567d00373e0c5c4f3c908f02",
+    "bytes": 977506331
+  },
+  "com-amazon.ungraph.txt": {
+    "sha256": "9c403688d01417ca452910947a7000bcd61965fc583f4afe57eb209c8b057b7a",
+    "bytes": 12585884
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_1.csv": {
+    "sha256": "6444ef4b989659e95af6e484559e0ac6db8895f717d46f4cb7bec6b7055e0e21",
+    "bytes": 66248
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_10.csv": {
+    "sha256": "99b8339396bc4fb25ba6a9f153863e890285db847ca17cd62953c3f81e4e19f6",
+    "bytes": 11858
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_11.csv": {
+    "sha256": "aa9a0b63a749479bbe51da630f564063e306410d0df35824e269bfcebe8658c8",
+    "bytes": 36450
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_12.csv": {
+    "sha256": "a37a071a4f918ff4530ea93e25caaed959c2302957b9488fb8c9dc7ae2c45cd7",
+    "bytes": 61250
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_14.csv": {
+    "sha256": "3592a8c394d4d88b321036ab4336b87cc3c63a705303b80195bff8aa8ca7f58b",
+    "bytes": 45000
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_15.csv": {
+    "sha256": "b263d55c79edd73f054c4e95e209a1687b4547b6b70059366f8e6536ca094335",
+    "bytes": 58482
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_16.csv": {
+    "sha256": "0221ce5b73f75919ed85d9003e34f5a09ebc9eb7050ac942f192f367fcb325f0",
+    "bytes": 43218
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_17.csv": {
+    "sha256": "6f056efc72326f7ed238342df121ae678dab78b1241cada535512a2510688799",
+    "bytes": 66978
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_18.csv": {
+    "sha256": "6408093988372811dbff1202d08e710a5cc81c57dae635d084800f9dbf2f302c",
+    "bytes": 105800
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_19.csv": {
+    "sha256": "b833f3c8bf2b78a919fd2af74809348d3fc4bcf5793e2084f5fbbc7715384881",
+    "bytes": 83232
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_2.csv": {
+    "sha256": "a2f162fdf087fb38298724bd41a87c95c5aa23af2d3f7e6c28ae9c8ed95a3b69",
+    "bytes": 76050
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_20.csv": {
+    "sha256": "8da257b5272ab7ea34722e1a6f72675c0e48007227969c5328964e5f7321e014",
+    "bytes": 48672
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_21.csv": {
+    "sha256": "1dd9390295414af0fe9e52c19f23b74ad0e35794bc2fa62ff116661ad4bff017",
+    "bytes": 81608
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_23.csv": {
+    "sha256": "8ced198b94271d526cff3d3313fa5e5759b9a3c78b35767095e6fe807fd5be13",
+    "bytes": 129032
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_24.csv": {
+    "sha256": "6af9685fbbd340cb5466a7cc1e77515efdfdb305dcc52eebcc00892a9f2f8c50",
+    "bytes": 53138
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_25.csv": {
+    "sha256": "d9d0984df25e9b708719862b141e4e39ebad2d9e378da45e27b5efb3bd6e2c00",
+    "bytes": 127008
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_26.csv": {
+    "sha256": "10c3104d6e664470e32c39a7fa20794e9fbd17e6745fab7f3ff2539567397866",
+    "bytes": 31752
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_27.csv": {
+    "sha256": "3d4618202f371f9d97fe14b4f6c88952008a71d19fb10e88521c6ea2c0e5da29",
+    "bytes": 53138
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_28.csv": {
+    "sha256": "1d94a275754f1b23a0c65773e9fb23318e11450c8d5d54ef2c41a38b4548acd6",
+    "bytes": 198450
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_29.csv": {
+    "sha256": "2784b55b31f4206624d8bab5859b0fce151500623b7175e68660bc725393708e",
+    "bytes": 168200
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_3.csv": {
+    "sha256": "e610ae124576fc6b54f2b2caaad6de65d2fcf5814554809b7b1b0b5a8b9f759e",
+    "bytes": 170528
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_30.csv": {
+    "sha256": "46e7dfcdda1c83eda7b1649d94b2f5441fda66c8999497251a989ad73221122e",
+    "bytes": 38088
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_31.csv": {
+    "sha256": "549905b66991956a97d07c34f2b3c9bc77ef1d9e78bf7140397659f5a0f7a689",
+    "bytes": 46818
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_32.csv": {
+    "sha256": "2f3e53500ee38cd2a38e30e7f26d6bc2b588cb9c6f5ed3b3b88fb565bbb6b2ce",
+    "bytes": 116162
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_33.csv": {
+    "sha256": "76514a12b0155b99d366af5b2e14945f098977642708c8f2d856bf81a79773c1",
+    "bytes": 83232
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_34.csv": {
+    "sha256": "c9781f6b8c91e8759bed5854d532580b980275edd532fdc8872b71a52bbe4b8e",
+    "bytes": 54450
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_35.csv": {
+    "sha256": "be08c97d3c3283aa66ee1d844f44e24f94cf946e0584ca4303f3ce6bc12e9741",
+    "bytes": 84872
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_36.csv": {
+    "sha256": "08a27ce78ef4e00547d99033eeae26933c7bd7de887f4683251f7f0b3b5a2530",
+    "bytes": 167042
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_37.csv": {
+    "sha256": "856df51b234151d0cd183e454f4d1b366649c55ea9d94ea7664761c2e5316a6c",
+    "bytes": 29282
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_38.csv": {
+    "sha256": "b504668601a616f5dfa5205e4b7b84e325c1036859f0781596e775ac6d6a0412",
+    "bytes": 49298
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_39.csv": {
+    "sha256": "78ae3297cac2be76d400725c68130d8bb0e1f6cd771472cb79e5bee4788e68ce",
+    "bytes": 164738
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_4.csv": {
+    "sha256": "d6fee00e689b8f7c10daca627820312ab3fb92000e58268e81600bc47c287e71",
+    "bytes": 114242
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_40.csv": {
+    "sha256": "9a4b16c6f306769e8b317e323caaeaf3d803afbd1f330ba2117fc7175def8245",
+    "bytes": 116162
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_41.csv": {
+    "sha256": "70d88bdde2670c99be605473ab113bb99b072884c63463f4185c25aa62689ed4",
+    "bytes": 57122
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_42.csv": {
+    "sha256": "9e97a16a84608b20c7eb9e6ea832aed3b2eb1b91ad1c289be39c6cf9c8b016c8",
+    "bytes": 73728
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_43.csv": {
+    "sha256": "21b776b160bb6a424305961ffb83c6810a1e642adea6e4d89f8672542b2da3c6",
+    "bytes": 78408
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_44.csv": {
+    "sha256": "47997a5d7c0d73b051074637dd5f71c666b0deccaa88c7880619dedc7fcb5116",
+    "bytes": 103058
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_45.csv": {
+    "sha256": "424855a467edd2491f940387f1afe5c45572fdd78757b75596d6435ae1cea146",
+    "bytes": 97682
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_46.csv": {
+    "sha256": "94fe52a73c449455771e55935a9f35e102302d9557fe998bf23c567a647b4524",
+    "bytes": 137288
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_47.csv": {
+    "sha256": "6fcc842fbce01977afdcda8051f77a673d930dcffe229f71795082574da45933",
+    "bytes": 38642
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_48.csv": {
+    "sha256": "1d6ec0154452cb3a018a6d000a7858a019b31ed277581eafa894dc65577b2a00",
+    "bytes": 66248
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_49.csv": {
+    "sha256": "1901d5380a0caa3b4b008d74874fd29e342dd7bd6f547453203e3d615d40e687",
+    "bytes": 74498
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_5.csv": {
+    "sha256": "1f4b126d230e43ae9a45baf5c7b3a5a261e594779ee5bb243dcbc609a4177495",
+    "bytes": 36450
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_50.csv": {
+    "sha256": "6b86113b5e37c4f2a7190384260adfe3e489b049914f2718843cc186219d3c99",
+    "bytes": 119072
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_51.csv": {
+    "sha256": "166d8579defcee4cc86a483a9ec98db736c6cf6f470db48d221a7dd19f604f0b",
+    "bytes": 126002
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_52.csv": {
+    "sha256": "75aa53836fb610edb390cf93ecd954e41b8a95510de0450740e6dcff25ec57c5",
+    "bytes": 213858
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_53.csv": {
+    "sha256": "8586eb3aae924cded25a9392666021a4e57d5f564863dbae208a43fc4309bbec",
+    "bytes": 45602
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_54.csv": {
+    "sha256": "d7b214f9ae21a0bed90363f5fc007598f273c2b332191fbe969bb314b2e64cbb",
+    "bytes": 19602
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_55.csv": {
+    "sha256": "59619377b01902342c154805a5c85aa952fdb65660438dab74c69715bde7ee77",
+    "bytes": 132098
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_56.csv": {
+    "sha256": "e9a3fb655d90617b3bf22e72240dbc736bd48acccf94da88b64c6d4f2e5965a2",
+    "bytes": 38088
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_57.csv": {
+    "sha256": "d78f3c8163a18abcbe66143e0403211b6d57f4d07aa358bc2aa8aa192e926dfc",
+    "bytes": 86528
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_58.csv": {
+    "sha256": "0467570fec9955921efa8e800378ba9c217cd79c4ddaf61ba6f7a1e898358976",
+    "bytes": 63368
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_59.csv": {
+    "sha256": "11117c700a91d5f28c09709a5085ace95c782df1cf6ad0653662749673c6251a",
+    "bytes": 216482
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_6.csv": {
+    "sha256": "32baa548a9056a6cdc374e3a915c584be22f7bb843da5572977f2c00ba66e2ca",
+    "bytes": 25992
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_60.csv": {
+    "sha256": "acb17ee9a93e99ad6cdcd8dc1e6b77fb605edfb3223534befc1fd68b89a5c67d",
+    "bytes": 253472
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_61.csv": {
+    "sha256": "cd320a6f2fa113ecab2726ccf3141b8d07a0ad8185c83bf968801dd0cda2856c",
+    "bytes": 29768
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_62.csv": {
+    "sha256": "67026112a632e828802a53d7a748b33dcbeffa7fc88d7d6087ef18bb0e9f9bcc",
+    "bytes": 72200
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_63.csv": {
+    "sha256": "4485effbc628d1ce43f16c229f1c9b2d43be4dbc4ccc2123bf6066a1668b187d",
+    "bytes": 51842
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_64.csv": {
+    "sha256": "9990065f8814cb9f6adab8196cf8de115998cb34309db9082318efd738669776",
+    "bytes": 132098
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_65.csv": {
+    "sha256": "a4b71757a3ddfc367ba7940f124bdb2255721ca3cb949287375162eb8e2aaef6",
+    "bytes": 176418
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_66.csv": {
+    "sha256": "f7417b68bb762cda7d239aeb72c5f5287d2e434f99ad03a5773b4296ce8746a5",
+    "bytes": 66978
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_67.csv": {
+    "sha256": "6fb0ce3d434d1b3b30055b0000bb13d7e42d32f8855d047beb54d95215ccb659",
+    "bytes": 74498
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_68.csv": {
+    "sha256": "ae32e632129b79c4518a8c2bb0d9c5d04af3291e5d0ad0b67434aa494afbbd68",
+    "bytes": 46818
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_69.csv": {
+    "sha256": "b6433db1ddd1cf3b26ab708267deb06f51a3c9e90006973b96c24c7b97bf0c23",
+    "bytes": 64800
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_7.csv": {
+    "sha256": "cc7b95319b36edefa335b2d1d820c14758792356f493cca862572808efd8c615",
+    "bytes": 42632
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_70.csv": {
+    "sha256": "8d1cbd2d942f45c9e9a47beb7e00b1658775824f9ed991c82e0ae47f750888f5",
+    "bytes": 84050
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_71.csv": {
+    "sha256": "aa0913373dd88b55cddf766f14d35d351440176018c6ae5c5525541ee7f96582",
+    "bytes": 177608
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_72.csv": {
+    "sha256": "06d9d1a16704660ca24baa0ebe05dc73859bafd354039061ce51e231eb7ee6bd",
+    "bytes": 99458
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_73.csv": {
+    "sha256": "1450993bf2a0d3699a8dbe8f35937e6242ac8bb4f54bb65440421f5fa6a89e98",
+    "bytes": 60552
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_74.csv": {
+    "sha256": "8f9097199abf8ee5aab7a07cff5ba149b9f9d99cd08de424b1132ad346661d34",
+    "bytes": 57800
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_75.csv": {
+    "sha256": "e62402188ecf72ea8480c543c3b2fd141efd9862524c75eb071f0407cdd91b24",
+    "bytes": 59168
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_76.csv": {
+    "sha256": "10505e08e08d4270a941dcb6b9134626a093cdf00afa84a52590ba8da47bdd76",
+    "bytes": 126002
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_77.csv": {
+    "sha256": "2e63610ad9940e0717fbfa7529c9b4cb26752f107b99340e5489089f46ccfc75",
+    "bytes": 48050
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_8.csv": {
+    "sha256": "d64eb0b6345102723fbb8a9b3334fba8f462db582338b05bf6c91f199e3056a9",
+    "bytes": 17672
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrices/adj_allVillageRelationships_HH_vilno_9.csv": {
+    "sha256": "fe3111acbd517f34fa57586719b6a94f453a071487db8788d3eb9b4cbce03924",
+    "bytes": 85698
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_1.csv": {
+    "sha256": "83b79ee82c682e3c256cef3e931041fd140069a5a53df9810092a80f56fa1bb6",
+    "bytes": 621
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_10.csv": {
+    "sha256": "bb2539cce9724bc04cef9c58fdca958f04e7752afa498c7ea17cec24d1aafae9",
+    "bytes": 222
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_11.csv": {
+    "sha256": "10401789ae77e36de3db5bf1758df8e5486f8c8874ad2d2ee23a073c39af6366",
+    "bytes": 432
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_12.csv": {
+    "sha256": "c3c78fc8f9dcfee91fba7eb21072daaba1629c5c84d552934256da51f9d02e61",
+    "bytes": 592
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_14.csv": {
+    "sha256": "f295bcc8930982eb387132316e976692f490af26f3c76eeeda8d8aab6c1445ef",
+    "bytes": 492
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_15.csv": {
+    "sha256": "2c378137de7e43d777cd1c67d7059a9f4015d5778dfd39b63263454d29563b00",
+    "bytes": 576
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_16.csv": {
+    "sha256": "a59d17fd2c4fe8e2863f02f24465da4e7c456ce51521e1b2885815040c347819",
+    "bytes": 480
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_17.csv": {
+    "sha256": "ebc06ad1c67d5da1350998b7c7e2930bd29944d52b35f24739b9d7fd7c033f80",
+    "bytes": 624
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_18.csv": {
+    "sha256": "358923a7a638eae24f8430943431b449ba4cf04fa23be4ccb45a2993d7105a87",
+    "bytes": 812
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_19.csv": {
+    "sha256": "27d35564a7e8dbdefe748016004d5366b0dac094b4a2ed8a3faf5bc7d4cc7626",
+    "bytes": 708
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_2.csv": {
+    "sha256": "c3f73f06d1ea20212f84d76a1b9fc6ffe08eb969fe3640e39787d402f8c8564c",
+    "bytes": 672
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_20.csv": {
+    "sha256": "113f98ac2d0cc1a8ce1a6c59ae8fe6d6c9cc59a39b5e34135ca77664e9192d76",
+    "bytes": 516
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_21.csv": {
+    "sha256": "9b2edd8f7dfc7778dab082e7a26fd9cb53049c4f749e98d08575894a4b81e0a7",
+    "bytes": 700
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_23.csv": {
+    "sha256": "ed54d9b836c9de0ecab8a74248a075ae8d371712856d1f4cbeeb91bb2216f0bc",
+    "bytes": 908
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_24.csv": {
+    "sha256": "f109c15b958db8210d7e9bd7a8061f6746ea0a009771243effdd95254af3a1f2",
+    "bytes": 544
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_25.csv": {
+    "sha256": "fb649a8e8dc81cf0045d0d7b2b47954e9951f2ad2388b05657586aef768d0089",
+    "bytes": 900
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_26.csv": {
+    "sha256": "1c34515755544628ee8041cbbc177ddfc92685f91eea86990c81c08e8db93c74",
+    "bytes": 397
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_27.csv": {
+    "sha256": "f109c15b958db8210d7e9bd7a8061f6746ea0a009771243effdd95254af3a1f2",
+    "bytes": 544
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_28.csv": {
+    "sha256": "f817a0235a8f5efeaca2ed073268cb0d59cb1d2d7e53d79bcf2164c7ad3f099b",
+    "bytes": 1152
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_29.csv": {
+    "sha256": "d101531e0398b0e8a7e9717f08f321050ee4bd9209a560c3a8e170fb74863cb4",
+    "bytes": 1052
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_3.csv": {
+    "sha256": "3f83829a935b30bd8feb0db676b3692b992203bfc147b8742231cd1dd535f020",
+    "bytes": 1060
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_30.csv": {
+    "sha256": "12aa17c2a96ba914c6431087c869ef89217f418f0ec61d09fd5d6c8f26579fbd",
+    "bytes": 444
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_31.csv": {
+    "sha256": "06e43c64f30de217e11108e04a2f3ae53a0f4fd87b5650de1d89e1db005c69bd",
+    "bytes": 504
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_32.csv": {
+    "sha256": "7748ad3f759882b0a22cf8b120d8cc92975ace17f06a34811940058dc440883a",
+    "bytes": 856
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_33.csv": {
+    "sha256": "27d35564a7e8dbdefe748016004d5366b0dac094b4a2ed8a3faf5bc7d4cc7626",
+    "bytes": 708
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_34.csv": {
+    "sha256": "3b3e883b0e84af3920a80c88b7697cecee1fad767a1ca0940c6682459011c4cc",
+    "bytes": 552
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_35.csv": {
+    "sha256": "6d26b419395e55e028fa942af48e1f41d6e9a5223e7045cc0f8ee8a693f31207",
+    "bytes": 716
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_36.csv": {
+    "sha256": "3acd552e6e14f9175912d97f3dd6ce0c03aa03fe561004dc00f8485e4f37b350",
+    "bytes": 1048
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_37.csv": {
+    "sha256": "9b26810ba0450941170b3eb803af4baa01e55e188a4a80a99f9f344716364ee3",
+    "bytes": 376
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_38.csv": {
+    "sha256": "ff6e81ef41217dea3d2b7f0809bc7d5bebb471902d55ed372155dad5e3ed90ca",
+    "bytes": 520
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_39.csv": {
+    "sha256": "6628d3b21b18a28365435ad8e4c89c2d11af50e10f064336ed38dae95a3578f3",
+    "bytes": 1040
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_4.csv": {
+    "sha256": "c3a087c21975507563ab91ab3658735032dc02ae9538cf2a93d189b99f34c0a0",
+    "bytes": 849
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_40.csv": {
+    "sha256": "7748ad3f759882b0a22cf8b120d8cc92975ace17f06a34811940058dc440883a",
+    "bytes": 856
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_41.csv": {
+    "sha256": "76185e7bc6f45096a1603853d9f69c41dc8b5e379280e326d911151c5710f62a",
+    "bytes": 568
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_42.csv": {
+    "sha256": "0b54494021b8a09daadd9d0b7e6a629dd336464dc8d94a537f480c5d1a7dcc17",
+    "bytes": 660
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_43.csv": {
+    "sha256": "208ba311fda24ecef685ca262f8090ea9fdf05a0f1ae9f346269279a30fa3ace",
+    "bytes": 684
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_44.csv": {
+    "sha256": "f70aa944644f7ff1e6cdd8cc0931b1604565fbb1bc74274e360ebe09508abd99",
+    "bytes": 800
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_45.csv": {
+    "sha256": "37afc233139fc6b4cefed0946f48ec69fd159063ed55062ed39ad84898aad9aa",
+    "bytes": 776
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_46.csv": {
+    "sha256": "9b3a8b5b54a96c448e03972cba8ed4b8b918e82425f84ffcbc9239958281c1fc",
+    "bytes": 940
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_47.csv": {
+    "sha256": "0b709911bcdb8e05687c723208effcd762a0b368239cd0886fb6270a0bebbfac",
+    "bytes": 448
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_48.csv": {
+    "sha256": "e3ec80e2f3d8b33386583d8ea0df8dca6b8183a9e8757e4802ab790e2c5b5c34",
+    "bytes": 620
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_49.csv": {
+    "sha256": "91f028a758bf445ee9ded47f61ae52b9e0ffa9c8fee25bc992c8555aff43d56f",
+    "bytes": 664
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_5.csv": {
+    "sha256": "10401789ae77e36de3db5bf1758df8e5486f8c8874ad2d2ee23a073c39af6366",
+    "bytes": 432
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_50.csv": {
+    "sha256": "fd6a7d8d61d494bebcd6b0bc5d0e15a231788627f79d43322de13f07daf329f8",
+    "bytes": 868
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_51.csv": {
+    "sha256": "eff3af4e68deffa827955a47f67140022d3ab60f76f3926549b370f9c1028818",
+    "bytes": 896
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_52.csv": {
+    "sha256": "83a1a1bf95c97c0549c716965138f945c6b5c6f56379d80516360c70f9e47f7b",
+    "bytes": 1200
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_53.csv": {
+    "sha256": "6a16c9a8c9c4aa09b5845ac749cc26710c8ddaa48ddaee5379e5a2e04d141109",
+    "bytes": 496
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_54.csv": {
+    "sha256": "41f8aab3becfbbe7f8ffae819ad66e2b5dd4c9204e3e58d96d172eff39d1bee0",
+    "bytes": 288
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_55.csv": {
+    "sha256": "cef70484e81e1da12204256306c2521b733ab0a3cd787c173c85f69463cf6807",
+    "bytes": 920
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_56.csv": {
+    "sha256": "12aa17c2a96ba914c6431087c869ef89217f418f0ec61d09fd5d6c8f26579fbd",
+    "bytes": 444
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_57.csv": {
+    "sha256": "4e2773c3288ac02df67fb62ba7aa3691b616274b8854ca9efd122d25fed17754",
+    "bytes": 724
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_58.csv": {
+    "sha256": "b1566bb48147e94d4b540db4df8e7ea801934224da9be8e4ef7aa57c59024d58",
+    "bytes": 605
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_59.csv": {
+    "sha256": "30a3638d8746f5013f0de979b84cb81fc59b5c8e4e6913ca551f5db078f5635a",
+    "bytes": 1208
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_6.csv": {
+    "sha256": "50919ec6ca85b16959ce375a5fa1f2b64efbf823b2b1cd2b91dc3c905e338cb7",
+    "bytes": 348
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_60.csv": {
+    "sha256": "7a438cff3ce9a29315b221df62ef8fa9ec95cb143fb63887a54986eb05cff512",
+    "bytes": 1316
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_61.csv": {
+    "sha256": "2b932ed55c8b244ff8e5e29e0900c6ccd1cd69e62839c3af5c7b48aba1d08577",
+    "bytes": 380
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_62.csv": {
+    "sha256": "09ddb24b3d2a1bac21369e9595304319e6243bfd41271611fcd6d630e99b2fe3",
+    "bytes": 652
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_63.csv": {
+    "sha256": "90c3b9b435941ab3b978f608903aa5737edcb3ca8c444b10550c0f13de2db0fd",
+    "bytes": 536
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_64.csv": {
+    "sha256": "cef70484e81e1da12204256306c2521b733ab0a3cd787c173c85f69463cf6807",
+    "bytes": 920
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_65.csv": {
+    "sha256": "7e65ee3dfe2272cac34230391caeb066934717ea6fca092168fae628dcb95051",
+    "bytes": 1080
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_66.csv": {
+    "sha256": "ebc06ad1c67d5da1350998b7c7e2930bd29944d52b35f24739b9d7fd7c033f80",
+    "bytes": 624
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_67.csv": {
+    "sha256": "91f028a758bf445ee9ded47f61ae52b9e0ffa9c8fee25bc992c8555aff43d56f",
+    "bytes": 664
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_68.csv": {
+    "sha256": "06e43c64f30de217e11108e04a2f3ae53a0f4fd87b5650de1d89e1db005c69bd",
+    "bytes": 504
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_69.csv": {
+    "sha256": "ee100366f805a30f20e37a358d9561b61225ea56cd8f000fec1c7d78b140ff88",
+    "bytes": 612
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_7.csv": {
+    "sha256": "702bba5aa877f34a270349e50fd012979159cc1dc2b4cf6dba982c129601437e",
+    "bytes": 476
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_70.csv": {
+    "sha256": "16c35373a5967355cba17a787c60e5577f9b4662c6972fe4b6b11a864c5fdf11",
+    "bytes": 712
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_71.csv": {
+    "sha256": "3740d8fa596f695e0f5218e095134291b3b69a66301ac3c2852c413ae06c4246",
+    "bytes": 1085
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_72.csv": {
+    "sha256": "003f7d1439b8915bf61b9628210729ea6ac96d0cd6f4732069b3333a78ef4f15",
+    "bytes": 784
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_73.csv": {
+    "sha256": "dd26b42910b0d1ccc661808ee48996c2e91da41d0c1f67278ce6c3b5b28d3247",
+    "bytes": 588
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_74.csv": {
+    "sha256": "88f504dd2b6853b93ed61ed2344637b5f2c8c12a253553736a1001e21dee8a8c",
+    "bytes": 572
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_75.csv": {
+    "sha256": "4f111f32df835522478b2fefd970eafea5daafa3f2e4e3db87fba8b6745a7ba3",
+    "bytes": 580
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_76.csv": {
+    "sha256": "eff3af4e68deffa827955a47f67140022d3ab60f76f3926549b370f9c1028818",
+    "bytes": 896
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_77.csv": {
+    "sha256": "aa200c8755afd994271c7a3a1963d970676e0fd8d2af82e28a519ad87f260624",
+    "bytes": 512
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_8.csv": {
+    "sha256": "936878b54c13b55bc80a99b780c433d70ced88cef42a876df4ccc1ce21c5f34c",
+    "bytes": 273
+  },
+  "datav4.0/datav4.0/Data/1. Network Data/Adjacency Matrix Keys/key_HH_vilno_9.csv": {
+    "sha256": "87b553e9a0e1e0a2fbb519522feb57947353dfeb74dfdab31e9cf18e7d595747",
+    "bytes": 720
+  },
+  "datav4.0/datav4.0/Data/2. Demographics and Outcomes/household_characteristics.dta": {
+    "sha256": "c3f34d4c3ea6e79700c9155a62bf6d5e14200c70722ab0ae645f0de3c9eab711",
+    "bytes": 839472
+  },
+  "large_twitch_edges.csv": {
+    "sha256": "27d5e813481745e2ab1d0b5cf86fa2b65065bac0917510731adba547f5efc2e4",
+    "bytes": 92951514
+  },
+  "large_twitch_features.csv": {
+    "sha256": "7c4f353e9af7a9e3a1e601cb37028af95918968a96e9cbe678886f9d089a5891",
+    "bytes": 8123438
+  }
+}

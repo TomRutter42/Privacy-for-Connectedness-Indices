@@ -6,31 +6,29 @@ Tom Rutter, Yuxin Liu, Amin Rahimian
 
 ## Overview
 
-This repository contains all code required to reproduce the figures and results in the paper "Differential Privacy for Network Connectedness Indices". 
-
-The scripts cover:
-- Theoretical simulations using stochastic block models (SBM) and graphon networks, with both binary and continuous node labels.
-- Empirical applications to three real-world datasets: Indian village networks (Banerjee et al. 2013), the Amazon co-purchase graph (Yang and Leskovec 2012), and the Twitch social network (Rozemberczki and Sarkar 2021).
+This repository contains the code and saved outputs for the paper "Differential Privacy for Network Connectedness Indices." It covers binary-label stochastic block model simulations, continuous-label graphon simulations, and applications to Karnataka village networks, Amazon co-purchases, and Twitch social networks.
 
 ## Directory Structure
 
+```text
+00_run_all.R                 Run selected analyses
+replication_helpers.R        Shared privacy mechanisms, graph/data helpers, and configuration
+binary_simulations.R         Binary connectedness simulations
+continuous_simulations.R     Continuous regression and bottom-quartile friend-rank simulations
+karnataka_villages_analysis.R Village connectedness, table, and figures
+twitch_analysis.R            Within-language Twitch regression and figures
+amazon_analysis.R            Amazon product-level regression and figures
+Figures/                     Output PDF figures and existing PNG variants
+Tables/                      Village summary table
+DerivedData/                 Simulation results and empirical summaries
+Logs/                        Clean-run logs, session details, checksums, and validation
 ```
-(root)/                        Main scripts and data files
-  00_run_all.R                 Master script — sources all scripts in order
-  binary_simulations.R         Binary label simulations (SBM, MSE vs homophily/epsilon/size)
-  continuous_simulations.R     Continuous label simulations (graphon, allocation, regression)
-  amazon_analysis.R
-  twitch_analysis.R
-  karnataka_villages_analysis.R
 
-Figures/                       All output PDF and PNG figures
-Tables/                        Reserved for any table outputs
-DerivedData/                   Intermediate CSV results written by scripts
-```
+Each analysis can run independently from the repository root. The shared helper implements the privacy mechanisms used across analyses.
 
 ## Data Requirements
 
-Three external datasets must be obtained separately before running the code. For convenience, all three datasets have been bundled and made available in a [shared Dropbox folder](https://www.dropbox.com/scl/fo/0qliudow4iy3nsn5vnxgt/AOJyP-LzLSXCwg6BFKB6Lq0?rlkey=73480n7acexzb0kfw380dlzwh&st=5x0l3j6o&dl=0). Download and point `ext_data_dir` to wherever you store it. Alternatively, download each dataset from its original source:
+Three external datasets must be obtained separately before running the code. For convenience, all three datasets have been bundled and made available in a [shared Dropbox folder](https://www.dropbox.com/scl/fo/0qliudow4iy3nsn5vnxgt/AOJyP-LzLSXCwg6BFKB6Lq0?rlkey=73480n7acexzb0kfw380dlzwh&st=5x0l3j6o&dl=0). Download the inputs and set `DP_DATA_DIR` to the directory containing them. Alternatively, download each dataset from its original source:
 
 ### 1. Banerjee et al. (2013) Indian Village Networks
 
@@ -45,7 +43,7 @@ Three external datasets must be obtained separately before running the code. For
 
 | Field | Detail |
 |---|---|
-| File names | `com-amazon.ungraph.txt` (edge list), `amazon-meta.txt` (product metadata, same archive) |
+| File names | `com-amazon.ungraph.txt` (edge list), `amazon-meta.txt` ([separate product metadata download](https://snap.stanford.edu/data/amazon-meta.html)) |
 | Source | [Stanford SNAP](https://snap.stanford.edu/data/com-Amazon.html) |
 | Citation | Yang, J., & Leskovec, J. (2012). Defining and evaluating network communities based on ground-truth. *ICDM*. |
 | Used by | `amazon_analysis.R` |
@@ -61,44 +59,67 @@ Three external datasets must be obtained separately before running the code. For
 
 ## How to Reproduce
 
-1. Install required R packages (see [Software Requirements](#software-requirements) below).
-2. Download the three external datasets and set paths as described above.
+1. Install the R packages listed below.
+2. Download the inputs. The village files must retain their `datav4.0/datav4.0/Data/` subdirectories; the Amazon and Twitch files belong directly under `DP_DATA_DIR`.
 3. From the repository root, run:
+
+   ```sh
+   DP_DATA_DIR="/path/to/NetworkPrivacyData" Rscript 00_run_all.R
+   ```
+
+   In an interactive R session, use:
+
    ```r
+   Sys.setenv(DP_DATA_DIR = "/path/to/NetworkPrivacyData")
    source("00_run_all.R")
    ```
-   Alternatively, run individual scripts directly. Scripts that do not require external data (all simulation scripts) can be run immediately. Scripts requiring the Karnataka village data, Amazon graph, or Twitch data must have the relevant files in place first.
 
-4. Output figures are written to `Figures/` and intermediate results to `DerivedData/`.
+To run a single empirical analysis:
+
+```sh
+DP_DATA_DIR="/path/to/NetworkPrivacyData" Rscript twitch_analysis.R
+```
+
+By default, the scripts use the paper's experiment settings and write to the existing `Figures/`, `Tables/`, and `DerivedData/` directories. The master runner checks empirical inputs before starting the simulations.
+
+The current saved outputs come from one full run completed on November 13, 2026, at 18:15 Pacific, using an empty `DP_OUTPUT_DIR`, all five analyses, and the default repetition counts. The continuous homophily sweep uses total epsilon 4 (label epsilon 2 and edge epsilon 2). All 41 outputs are installed, including `twitch_language_summary.csv`; the current scripts and outputs match the recorded SHA-256 checksums. See the [run log](Logs/revisions3_2026-11-13_174815/run.log), [run manifest](Logs/revisions3_2026-11-13_174815/run-manifest.json), and [validation results](Logs/revisions3_2026-11-13_174815/validation.json).
+
+| Setting | Meaning | Default |
+|---|---|---|
+| `DP_DATA_DIR` | Directory containing the raw datasets | `.data` |
+| `DP_OUTPUT_DIR` | Output directory | Repository root |
+| `DP_TASKS` | Comma-separated analyses for the master runner | `binary,continuous,villages,twitch,amazon` |
+| `DP_ITERATIONS` | Optional integer repetition override, at least 2 | Experiment-specific counts |
+
+Use a separate `DP_OUTPUT_DIR` when overriding counts. The unit controlled by `DP_ITERATIONS` depends on the experiment:
+
+| Experiment | What `DP_ITERATIONS` controls |
+|---|---|
+| Binary homophily, privacy-budget, and cell-composition sweeps | Independent graphs per parameter setting. Each graph retains 15 privacy draws for homophily and composition and 10 for the privacy-budget sweep. |
+| Binary budget allocation | Privacy draws per allocation on one fixed graph per network size. |
+| Binary network-size sweep | Independent graphs per network size, with one privacy draw per budget on each graph. |
+| Continuous graphon budget allocation | Privacy draws per allocation on one fixed graph and label vector per network size. |
+| Continuous graphon homophily sweep | Privacy draws on one fixed graph and label vector per homophily/size setting. |
+| Village, Twitch, and Amazon analyses | Privacy draws per budget on each fixed empirical network. |
+
+Seeds are fixed separately for each experiment, so results do not depend on which other analyses were selected. Each analysis script reruns its simulations and generates its outputs; it does not load saved simulation results.
 
 ## Software Requirements
 
-R (version 4.0 or later) with the following packages:
+The code was validated with R 4.6.1 and uses these packages:
 
 | Package | Purpose |
 |---|---|
-| `data.table` | fast data manipulation |
-| `ggplot2` | plotting |
-| `VGAM` | Laplace distribution (`rlaplace`) |
-| `igraph` | graph construction and analysis |
-| `Matrix` | sparse matrix operations |
-| `parallel` | parallel simulation (`mclapply`) |
-| `haven` | reading Stata `.dta` files (village data) |
-| `dplyr` | data wrangling |
-| `scales` | axis label formatting |
+| `data.table` | Data manipulation |
+| `ggplot2` | Plotting |
+| `igraph` | Graph simulation |
+| `Matrix` | Sparse matrix operations |
+| `haven` | Reading village Stata files |
+| `dplyr` | Village data preparation |
+| `scales` | Axis formatting |
+| `ggrepel` | Twitch plot labels |
 
-Install all packages with:
 ```r
-install.packages(c("data.table", "ggplot2", "VGAM", "igraph", "Matrix",
-                   "parallel", "haven", "dplyr", "scales", "ggrepel", "tidyr"))
+install.packages(c("data.table", "ggplot2", "igraph", "Matrix",
+                   "haven", "dplyr", "scales", "ggrepel"))
 ```
-
-## Computational Note
-
-Some simulation scripts are computationally intensive. In particular:
-
-- `binary_simulations.R` — MSE vs network size runs 10,000 iterations per combination; expect several hours on a laptop.
-- `continuous_simulations.R` — allocation sweep scales up to N=500,000 nodes and uses `parallel::mclapply`; run on a multi-core machine.
-- `twitch_analysis.R` — processes ~168,000 nodes and runs 1,000 DP simulation iterations per epsilon level.
-
-For quick testing, reduce `NUM_ITERATIONS` in the relevant scripts.

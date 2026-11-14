@@ -2,9 +2,15 @@
 # Loads village networks with caste data, runs DP analysis, and generates figures.
 # Caste coding: 0 = SC/ST/Minority, 1 = General/OBC, NA = blank
 
+source("replication_helpers.R", local = TRUE)
+require_packages(c("haven", "dplyr", "ggplot2", "Matrix", "data.table"))
+library(Matrix)
+library(data.table)
+start_experiment("villages", 2026110720L)
+ext_data_dir <- config$data
+
 library(haven)
 library(dplyr)
-library(VGAM)
 library(ggplot2)
 
 # --- Configuration ---
@@ -25,7 +31,7 @@ clean_village_network <- function(village_data) {
     return(NULL)
   }
 
-  A_clean <- A[keep_idx, keep_idx]
+  A_clean <- A[keep_idx, keep_idx, drop = FALSE]
   caste_clean <- caste[keep_idx]
 
   list(
@@ -35,55 +41,6 @@ clean_village_network <- function(village_data) {
     n_caste_0 = sum(caste_clean == 0),
     n_caste_1 = sum(caste_clean == 1)
   )
-}
-
-row_normalize <- function(A) {
-  row_sums <- rowSums(A)
-  rA <- A
-  has_friends <- row_sums > 0
-  rA[has_friends, ] <- A[has_friends, ] / row_sums[has_friends]
-  return(rA)
-}
-
-compute_true_ec <- function(rA, caste_vector) {
-  exposure <- as.numeric(rA %*% caste_vector)
-  caste_0_idx <- which(caste_vector == 0)
-
-  if (length(caste_0_idx) == 0) {
-    return(NA)
-  }
-
-  mean(exposure[caste_0_idx], na.rm = TRUE)
-}
-
-compute_noisy_ec_coupled <- function(rA, caste_vector, epsilon_s, epsilon_e, noise_seed) {
-  n <- length(caste_vector)
-
-  p <- 1 / (1 + exp(epsilon_s))
-
-  flip_indicator <- noise_seed$U_flip[1:n] < p
-  caste_noisy <- ifelse(flip_indicator, 1 - caste_vector, caste_vector)
-
-  rho_hat <- as.numeric(rA %*% caste_noisy)
-
-  w <- (as.numeric(caste_noisy == 0) - p) / (1 - 2 * p)
-  rho_tilde <- (rho_hat - p) / (1 - 2 * p)
-
-  S0 <- sum(w)
-  S1 <- sum(w * rho_tilde)
-
-  scale_param <- 2 / ((1 - 2 * p) * epsilon_e)
-  noise_val <- noise_seed$U_laplace * scale_param
-
-  S1_private <- S1 + noise_val
-
-  if (abs(S0) > 1e-10) {
-    ec_private <- S1_private / S0
-  } else {
-    ec_private <- NA
-  }
-
-  return(ec_private)
 }
 
 load_village_network <- function(village_num, adj_dir, key_dir, hh_data) {
@@ -137,6 +94,7 @@ load_village_network <- function(village_num, adj_dir, key_dir, hh_data) {
 # --- Main Script ---
 
 # 1. Load household characteristics
+check_data_files(village_input_files(config$data))
 cat("Loading household characteristics...\n")
 hh_data <- read_dta(demo_file)
 
@@ -207,7 +165,7 @@ print(table(village_diagnostic$status, village_diagnostic$reason))
 
 # --- DP Parameters ---
 epsilon_values <- c(0.5, 1, 2, 4, 6, 8)
-num_iterations <- 1000
+num_iterations <- iteration_count(1000L)
 
 cat("\n")
 cat("============================================================\n")
@@ -220,8 +178,10 @@ villages_to_process <- names(village_networks_with_caste)
 results_list <- list()
 raw_data_list <- list()
 plot_data_list <- list()
+long_results <- list()
 
 for (v_name in villages_to_process) {
+  set.seed(2026110720L + as.integer(v_name))
   v_data <- village_networks_with_caste[[v_name]]
 
   v_clean <- clean_village_network(v_data)
@@ -230,11 +190,12 @@ for (v_name in villages_to_process) {
     next
   }
 
-  rA <- row_normalize(v_clean$adj_matrix)
+  validate_adjacency(v_clean$adj_matrix)
+  rA <- row_normalize(Matrix(v_clean$adj_matrix, sparse = TRUE))
   caste <- v_clean$caste_vector
   n <- v_clean$n_households
 
-  true_ec <- compute_true_ec(rA, caste)
+  true_ec <- true_connectedness(rA, caste)
 
   if (is.na(true_ec)) {
     next
@@ -243,11 +204,12 @@ for (v_name in villages_to_process) {
   sq_errors <- matrix(NA, nrow = length(epsilon_values), ncol = num_iterations)
   noisy_ec_vals <- matrix(NA, nrow = length(epsilon_values), ncol = num_iterations)
   first_run_eps_8 <- NA
+  stabilized <- matrix(FALSE, nrow = length(epsilon_values), ncol = num_iterations)
 
   for (iter in 1:num_iterations) {
     noise_seed <- list(
       U_flip = runif(n),
-      U_laplace = rlaplace(1, 0, 1)
+      U_laplace = r_laplace(1)
     )
 
     for (i in seq_along(epsilon_values)) {
@@ -255,7 +217,10 @@ for (v_name in villages_to_process) {
       eps_s <- eps / 2
       eps_e <- eps / 2
 
-      noisy_ec <- compute_noisy_ec_coupled(rA, caste, eps_s, eps_e, noise_seed)
+      private <- private_connectedness(rA, caste, eps_s, eps_e,
+                                       noise_seed$U_flip, noise_seed$U_laplace, details = TRUE)
+      noisy_ec <- private$estimate
+      stabilized[i, iter] <- private$stabilized
 
       if (eps == 8 && iter == 1) {
         first_run_eps_8 <- noisy_ec
@@ -280,11 +245,17 @@ for (v_name in villages_to_process) {
     n_caste_1 = v_clean$n_caste_1,
     avg_degree = avg_degree,
     true_ec = true_ec,
-    mse_eps_8 = mse_values[5],
-    sd_eps_8 = sd_values[5]
+    mse_eps_8 = mse_values[match(8, epsilon_values)],
+    sd_eps_8 = sd_values[match(8, epsilon_values)]
   )
 
   raw_data_list[[v_name]] <- noisy_ec_vals
+  long_results[[v_name]] <- data.frame(
+    village = as.integer(v_name), epsilon = epsilon_values,
+    epsilon_label = epsilon_values / 2, epsilon_edge = epsilon_values / 2,
+    delta_label = 0, true_ec = true_ec, mse = mse_values, sd = sd_values,
+    bias = rowMeans(noisy_ec_vals) - true_ec,
+    n_attempted = num_iterations, n_stabilized = rowSums(stabilized))
 
   if (!is.na(first_run_eps_8)) {
     plot_data_list[[v_name]] <- data.frame(
@@ -313,20 +284,12 @@ cat("--- Signal vs Noise Variance ---\n")
 signal_var <- var(results_df$true_ec, na.rm = TRUE)
 cat("Signal Variance (Var of True EC across villages):", round(signal_var, 6), "\n\n")
 
-cat("Noise Variance (Mean MSE across villages) by Epsilon:\n")
-for (i in seq_along(epsilon_values)) {
-  eps <- epsilon_values[i]
-  mse_col <- paste0("mse_eps_", eps)
-  if (eps == 0.5) mse_col <- "mse_eps_0.5"
-
-  noise_var <- mean(results_df[[mse_col]], na.rm = TRUE)
-  snr <- signal_var / noise_var
-
-  cat(sprintf(
-    "  Epsilon = %.1f: Noise Var = %.6f, Signal-to-Noise Ratio = %.3f\n",
-    eps, noise_var, snr
-  ))
-}
+long_summary <- rbindlist(long_results)
+signal_noise <- long_summary[, .(
+  signal_variance = signal_var, mean_noise_variance = mean(sd^2),
+  mean_mse = mean(mse), mean_noise_sd = mean(sd),
+  variance_ratio = signal_var / mean(sd^2), mse_ratio = signal_var / mean(mse)), by = epsilon]
+print(signal_noise)
 
 # --- Summary Table ---
 cat("\nExporting summary table to LaTeX...\n")
@@ -337,7 +300,7 @@ tex_table$sd_eps_8   <- sprintf("%.2f", tex_table$sd_eps_8)
 
 headers <- c("Village \\#", "\\# HH", "\\# Hist.\ Dis.", "\\# Hist.\ Non-Dis.", "Avg.\ Deg.", "Cross-Caste Conn.", "SD ($\\varepsilon$=8)")
 
-tex_con <- file("Tables/village_summary.tex", "w")
+tex_con <- file(output_path("Tables", "village_summary.tex"), "w")
 cat("\\begin{tabular}{lrrrrrr}\n", file = tex_con)
 cat("\\hline\n", file = tex_con)
 cat(paste(headers, collapse = " & "), "\\\\\n", file = tex_con)
@@ -350,38 +313,36 @@ cat("\\end{tabular}\n", file = tex_con)
 close(tex_con)
 cat("Table saved to: Tables/village_summary.tex\n")
 
-write.csv(results_df, "DerivedData/village_caste_dp_results.csv", row.names = FALSE)
+write.csv(results_df, output_path("DerivedData", "village_caste_dp_results.csv"), row.names = FALSE)
 cat("Results saved to: DerivedData/village_caste_dp_results.csv\n")
 
-# --- True vs Noisy EC Scatter (Excluding Village 56) ---
+# --- True vs Noisy EC Scatter for the Analysis Sample ---
 cat("\nGenerating chart: True vs Noisy EC (Epsilon = 8)...\n")
 plot_data <- do.call(rbind, plot_data_list)
 
 if (!is.null(plot_data) && nrow(plot_data) > 0) {
-  cor_val_no56 <- cor(plot_data$true_ec, plot_data$noisy_ec, use = "complete.obs")
+  cor_val <- cor(plot_data$true_ec, plot_data$noisy_ec, use = "complete.obs")
 
-  if (TRUE) {
-    p_no56 <- ggplot(plot_data, aes(x = true_ec, y = noisy_ec)) +
-      geom_point(aes(size = n_households), color = "dodgerblue4", alpha = 0.7) +
-      geom_abline(intercept = 0, slope = 1, linetype = "twodash", color = "grey50", linewidth = 0.8) +
-      scale_size_continuous(range = c(0.5, 3)) +
-      labs(
-        subtitle = sprintf("Correlation Coefficient = %.2f", cor_val_no56),
-        x = "True Across-Caste Connectedness",
-        y = "Private Across-Caste Connectedness (Epsilon = 8)",
-        size = "Households"
-      ) +
-      theme_classic() +
-      coord_fixed(ratio = 1) +
-      theme(
-        legend.position = "right",
-        plot.subtitle = element_text(hjust = 0.5)
-      )
+  p_scatter <- ggplot(plot_data, aes(x = true_ec, y = noisy_ec)) +
+    geom_point(aes(size = n_households), color = "dodgerblue4", alpha = 0.7) +
+    geom_abline(intercept = 0, slope = 1, linetype = "twodash", color = "grey50", linewidth = 0.8) +
+    scale_size_continuous(range = c(0.5, 3)) +
+    labs(
+      subtitle = sprintf("Correlation Coefficient = %.2f", cor_val),
+      x = "True Across-Caste Connectedness",
+      y = "Private Across-Caste Connectedness (Epsilon = 8)",
+      size = "Households"
+    ) +
+    theme_classic() +
+    coord_fixed(ratio = 1) +
+    theme(
+      legend.position = "right",
+      plot.subtitle = element_text(hjust = 0.5)
+    )
 
-    ggsave("Figures/True_vs_Noisy_EC_Village_No_56.pdf", p_no56, width = 5, height = 5)
-    ggsave("Figures/True_vs_Noisy_EC_Village_No_56.png", p_no56, width = 5, height = 5)
-    cat("Chart saved to: Figures/True_vs_Noisy_EC_Village_No_56.pdf and .png\n")
-  }
+  ggsave(output_path("Figures", "True_vs_Noisy_EC_Village_No_56.pdf"), p_scatter, width = 5, height = 5)
+  ggsave(output_path("Figures", "True_vs_Noisy_EC_Village_No_56.png"), p_scatter, width = 5, height = 5)
+  cat("Chart saved to: Figures/True_vs_Noisy_EC_Village_No_56.pdf and .png\n")
 } else {
   cat("Warning: No data for chart (plot_data is empty)\n")
 }
@@ -405,10 +366,10 @@ if (length(eps4_idx) > 0 && length(eps6_idx) > 0 && length(eps8_idx) > 0) {
       for (v_idx in seq_along(raw_data_list)) {
         lin_idx <- eps_idx + (iter - 1) * n_eps
         val <- raw_data_list[[v_idx]][lin_idx]
-        if (is.na(val) || length(val) == 0) val <- NA
+        if (length(val) == 0 || is.na(val)) val <- NA
         noisy_ec_run[v_idx] <- as.numeric(val)
       }
-      cor_vals[iter] <- cor(true_ec_vec, noisy_ec_run, use = "complete.obs")
+      cor_vals[iter] <- complete_correlation(true_ec_vec, noisy_ec_run)
     }
     return(cor_vals)
   }
@@ -446,8 +407,8 @@ if (length(eps4_idx) > 0 && length(eps6_idx) > 0 && length(eps8_idx) > 0) {
       legend.position = "top"
     )
 
-  ggsave("Figures/Correlation_Histogram_Overlaid_Eps4_6_8.pdf", plot = p_overlaid, width = 5, height = 5)
-  ggsave("Figures/Correlation_Histogram_Overlaid_Eps4_6_8.png", plot = p_overlaid, width = 5, height = 5)
+  ggsave(output_path("Figures", "Correlation_Histogram_Overlaid_Eps4_6_8.pdf"), plot = p_overlaid, width = 5, height = 5)
+  ggsave(output_path("Figures", "Correlation_Histogram_Overlaid_Eps4_6_8.png"), plot = p_overlaid, width = 5, height = 5)
   cat("Chart saved to: Figures/Correlation_Histogram_Overlaid_Eps4_6_8.pdf and .png\n")
 } else {
   cat("Warning: One or more epsilons (4, 6, 8) missing from simulation values.\n")
@@ -483,11 +444,12 @@ boxplot_data <- data.frame(
 fill_colors <- c("Historically\nDisadvantaged" = "#E69F00", "Historically\nNon-Disadvantaged" = "#56B4E9")
 point_colors <- c("Historically\nDisadvantaged" = "#D55E00", "Historically\nNon-Disadvantaged" = "#0072B2")
 
+set.seed(2026110720L)
 p_box <- ggplot(boxplot_data, aes(x = exposure, y = caste, fill = caste, color = caste)) +
   geom_jitter(height = 0.15, alpha = 0.4, size = 1.2) +
   geom_boxplot(width = 0.4, alpha = 0.7, outlier.shape = NA, color = "black") +
   labs(
-    x = "Proportion of Connections to\nHistorically Non-Disadvantaged Households",
+    x = "Proportion of connections to\nhistorically non-disadvantaged\nhouseholds",
     y = ""
   ) +
   theme_minimal(base_size = 14) +
@@ -504,6 +466,6 @@ p_box <- ggplot(boxplot_data, aes(x = exposure, y = caste, fill = caste, color =
     plot.margin = margin(15, 20, 15, 10)
   )
 
-ggsave("Figures/Largest_Village_Connectivity_Boxplot.pdf", p_box, width = 5, height = 5)
-ggsave("Figures/Largest_Village_Connectivity_Boxplot.png", p_box, width = 5, height = 5)
-cat("Boxplot saved to: Figures/Largest_Village_Connectivity_Boxplot.pdf and .png\n")
+ggsave(output_path("Figures", "Largest_Village_Connectivity_Boxplot.pdf"), p_box, width = 5, height = 5)
+ggsave(output_path("Figures", "Largest_Village_Connectivity_Boxplot.png"), p_box, width = 5, height = 5)
+cat("Village figures and table complete.\n")

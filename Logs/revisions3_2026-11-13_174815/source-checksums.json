@@ -1,0 +1,30 @@
+{
+  "00_run_all.R": {
+    "sha256": "c9b858b7638a5edc1210b6bc4598e10fa3b1b36b3f919d925cbe9cbafa6f9b00",
+    "bytes": 1461
+  },
+  "amazon_analysis.R": {
+    "sha256": "d126284885de50e16c911e92fb678018a3b3741b3c1d3c65430d8fdd661b300f",
+    "bytes": 3132
+  },
+  "binary_simulations.R": {
+    "sha256": "db28fcbb375b2ab836f7d234bbf521f1d2288a41e2c4f1038cc3796e6ae26ec6",
+    "bytes": 8884
+  },
+  "continuous_simulations.R": {
+    "sha256": "242ca86f7c6988342ece88c249844e25058adad314860a4988616a3edb401666",
+    "bytes": 4484
+  },
+  "karnataka_villages_analysis.R": {
+    "sha256": "4c197dfb9cabdbdc03098a64d95ce52a13cd1bfab78be097f4de64f3ab114d57",
+    "bytes": 16661
+  },
+  "replication_helpers.R": {
+    "sha256": "c8f071e29b16da54dd6020826ee5bf2db8a3c1273235c26f3bca3b3aca4cc8a7",
+    "bytes": 19234
+  },
+  "twitch_analysis.R": {
+    "sha256": "021a6e4919fe5e5058d5d4bfe93d7adbd6d06d0a147276b90ed6fdb5d42801ec",
+    "bytes": 6948
+  }
+}

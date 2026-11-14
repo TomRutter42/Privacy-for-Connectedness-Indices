@@ -1,44 +1,23 @@
-# ==============================================================================
-# 00_run_all.R — This script runs the replication kit.
-#
-# Before running you should make sure all of the external data files are in place,
-# if you want to re-run the empirical applications.
-#
-# 1. Banerjee et al. (2013) village network data (datav4.0)
-#    Available at: https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/21538
-#
-# 2. Amazon co-purchase graph: com-amazon.ungraph.txt (and amazon-meta.txt)
-#    Available at: https://snap.stanford.edu/data/com-Amazon.html
-#
-# 3. Twitch Gamers dataset: large_twitch_edges.csv, large_twitch_features.csv
-#    Available at: https://snap.stanford.edu/data/twitch_gamers.html
-#
-# All three datasets should be placed in the folder pointed to by ext_data_dir below.
-# The Banerjee data should retain its original folder structure (datav4.0/datav4.0/Data/).
-#
-# If it helps, I have put all of the data you will need in this Dropbox folder:
-# https://www.dropbox.com/scl/fo/0qliudow4iy3nsn5vnxgt/AOJyP-LzLSXCwg6BFKB6Lq0?rlkey=73480n7acexzb0kfw380dlzwh&st=5x0l3j6o&dl=0
-# Download it and point ext_data_dir to wherever you store it.
-#
-# Output figures are written to Figures/, tables to Tables/ and derived data to DerivedData/.
-# ==============================================================================
-
-# --- External data directory --- change me!
-ext_data_dir <- "C:/Users/tomru/Dropbox (Personal)/NetworkPrivacyData"
-
-# --- Binary label simulations ---
-source("binary_simulations.R")
-
-# --- Continuous label simulations ---
-source("continuous_simulations.R")
-
-# --- Empirical applications (require external data) ---
-
-## Karnataka villages
-source("karnataka_villages_analysis.R")
-
-## Twitch
-source("twitch_analysis.R")
-
-## Amazon
-source("amazon_analysis.R")
+# Run from the repository root: Rscript 00_run_all.R
+# Configuration: DP_DATA_DIR, DP_OUTPUT_DIR, DP_TASKS, DP_ITERATIONS.
+# Example: DP_TASKS=binary,continuous Rscript 00_run_all.R
+source("replication_helpers.R", local = TRUE)
+analyses <- c(binary = "binary_simulations.R", continuous = "continuous_simulations.R",
+              villages = "karnataka_villages_analysis.R", twitch = "twitch_analysis.R",
+              amazon = "amazon_analysis.R")
+requested <- strsplit(Sys.getenv("DP_TASKS", paste(names(analyses), collapse = ",")), ",", fixed = TRUE)[[1]]
+if (!length(requested) || any(!requested %in% names(analyses))) {
+  stop("DP_TASKS must be a comma-separated subset of binary,continuous,villages,twitch,amazon.")
+}
+require_packages(c("data.table", "ggplot2", "igraph", "Matrix", "haven", "dplyr", "scales", "ggrepel"))
+# Detect missing empirical inputs before spending hours on the simulation grids.
+if ("villages" %in% requested) check_data_files(village_input_files(config$data))
+if ("twitch" %in% requested) check_data_files(file.path(config$data,
+  c("large_twitch_features.csv", "large_twitch_edges.csv")))
+if ("amazon" %in% requested) check_data_files(file.path(config$data,
+  c("amazon-meta.txt", "com-amazon.ungraph.txt")))
+for (name in requested) {
+  # A new environment prevents similarly named analysis objects from leaking.
+  sys.source(analyses[[name]], envir = new.env(parent = environment()))
+}
+cat("All requested analyses completed.\n")

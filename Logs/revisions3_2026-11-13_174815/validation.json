@@ -1,0 +1,402 @@
+{
+  "csv": {
+    "MSE_vs_Homophily.csv": {
+      "rows": 27,
+      "columns": [
+        "p_within",
+        "epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "mse",
+        "n_attempted",
+        "n_valid",
+        "n_stabilized",
+        "mse_se",
+        "n_graphs",
+        "ci_lower",
+        "ci_upper"
+      ]
+    },
+    "MSE_vs_CellComposition.csv": {
+      "rows": 27,
+      "columns": [
+        "prop_high_ses",
+        "epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "mse",
+        "n_attempted",
+        "n_valid",
+        "n_stabilized",
+        "mse_se",
+        "n_graphs",
+        "ci_lower",
+        "ci_upper"
+      ]
+    },
+    "accuracy_results_Amin_VarianceReduced.csv": {
+      "rows": 24,
+      "columns": [
+        "Homophily",
+        "epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "mse",
+        "n_attempted",
+        "n_valid",
+        "n_stabilized",
+        "mse_se",
+        "n_graphs",
+        "ci_lower",
+        "ci_upper"
+      ]
+    },
+    "sbm_dp_mse_results_combined.csv": {
+      "rows": 72,
+      "columns": [
+        "n_nodes",
+        "epsilon",
+        "epsilon_label_proportion",
+        "epsilon_label",
+        "epsilon_edge",
+        "mse",
+        "n_attempted",
+        "n_valid",
+        "n_stabilized",
+        "mse_se",
+        "n_graphs",
+        "ci_lower",
+        "ci_upper"
+      ]
+    },
+    "mse_simulation_results_ec.csv": {
+      "rows": 200000,
+      "columns": [
+        "epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "delta_label",
+        "graph_id",
+        "iteration",
+        "true_ec",
+        "estimate",
+        "squared_error",
+        "stabilized",
+        "n_nodes"
+      ]
+    },
+    "graphon_regression_mse_results.csv": {
+      "rows": 24,
+      "columns": [
+        "N",
+        "homophily",
+        "epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "delta_label",
+        "true_slope",
+        "true_alpha",
+        "true_r_squared",
+        "true_mafr",
+        "n_attempted",
+        "n_valid",
+        "n_failed",
+        "failure_rate",
+        "mse",
+        "bias",
+        "sd"
+      ],
+      "total_failed_releases": 0
+    },
+    "village_caste_dp_results.csv": {
+      "rows": 46,
+      "columns": [
+        "village",
+        "n_households",
+        "n_caste_0",
+        "n_caste_1",
+        "avg_degree",
+        "true_ec",
+        "mse_eps_8",
+        "sd_eps_8"
+      ]
+    },
+    "twitch_language_summary.csv": {
+      "rows": 63,
+      "columns": [
+        "language",
+        "n_nodes",
+        "true_beta",
+        "epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "delta_label",
+        "n_attempted",
+        "n_valid",
+        "n_failed",
+        "failure_rate",
+        "mse",
+        "bias",
+        "sd"
+      ],
+      "total_failed_releases": 340
+    },
+    "twitch_dp_results.csv": {
+      "rows": 3000,
+      "columns": [
+        "Epsilon",
+        "epsilon_label",
+        "epsilon_edge",
+        "delta_label",
+        "iteration",
+        "Correlation",
+        "n_languages",
+        "n_languages_used",
+        "n_failed"
+      ],
+      "mean_correlation_by_epsilon": {
+        "4": 0.3076822498608758,
+        "6": 0.6603475668550617,
+        "8": 0.8566042498943081
+      }
+    },
+    "dp_simulation_amazon_multi_eps.csv": {
+      "rows": 3000,
+      "columns": [
+        "slope",
+        "alpha",
+        "status",
+        "iteration",
+        "mafr",
+        "epsilon_label",
+        "epsilon_edge",
+        "epsilon",
+        "delta_label",
+        "true_slope"
+      ],
+      "status_counts": {
+        "ok": 3000
+      }
+    }
+  },
+  "pdf": {
+    "Correlation_Histogram_Overlaid_Eps4_6_8.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "Largest_Village_Connectivity_Boxplot.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "MSE_vs_CellComposition.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "MSE_vs_Homophily.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "True_vs_Noisy_EC_Village_No_56.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "Twitch_Correlation_Histogram_Overlaid_Eps4_6_8.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "Twitch_EN_Binscatter.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "Twitch_Scatter_Eps8_Run1.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "accuracyVsEpsilon_Amin_VarianceReduced.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "amazon_salesrank_regression.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "dp_coefficient_histogram_overlaid.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "graphon_allocation_mse_plot.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "graphon_homophily_rsquared_plot.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "graphon_integral_mse_plot.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "graphon_regression_mse_plot.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "mse_vs_size_constant_degree_ec.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "sbm_dp_mse_plot_2000.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    },
+    "sbm_dp_mse_plot_20000.pdf": {
+      "pages": 1,
+      "size_points": [
+        360,
+        360
+      ]
+    }
+  },
+  "png": {
+    "Correlation_Histogram_Overlaid_Eps4_6_8.png": {
+      "pixels": [
+        1500,
+        1500
+      ]
+    },
+    "Largest_Village_Connectivity_Boxplot.png": {
+      "pixels": [
+        1500,
+        1500
+      ]
+    },
+    "True_vs_Noisy_EC_Village_No_56.png": {
+      "pixels": [
+        1500,
+        1500
+      ]
+    },
+    "Twitch_Correlation_Histogram_Overlaid_Eps4_6_8.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "Twitch_EN_Binscatter.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "Twitch_Scatter_Eps8_Run1.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "amazon_salesrank_regression.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "dp_coefficient_histogram_overlaid.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "graphon_allocation_mse_plot.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "graphon_homophily_rsquared_plot.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "graphon_integral_mse_plot.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    },
+    "graphon_regression_mse_plot.png": {
+      "pixels": [
+        800,
+        800
+      ]
+    }
+  },
+  "checks": [
+    "CSV dimensions, full default repetition counts, numeric consistency, failure accounting, and village table checked.",
+    "Figure 6 uses epsilon_label = epsilon_edge = 2 for all network sizes and homophily settings.",
+    "All 18 PDFs parsed and rendered; all 12 PNGs decoded; visual review pending."
+  ],
+  "figure6": {
+    "epsilon_label": 2,
+    "epsilon_edge": 2,
+    "total_epsilon": 4,
+    "delta_label": 0.001,
+    "settings": 24,
+    "repetitions_per_setting": 2500
+  },
+  "visual_review": {
+    "pdf_count": 18,
+    "figure6_panels": "Both regenerated panels visually checked; labels, curves, and legends are legible with no clipping."
+  },
+  "status": "passed"
+}
